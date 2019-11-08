@@ -106,3 +106,17 @@ where d.dept_name like 'Sales'
 order by e.emp_no;
 
 select * from test6;
+
+--Query 7
+drop view if exists test7;
+
+create view test7 as
+select e.emp_no, e.last_name, e.first_name, d.dept_name
+from employees as e
+join dept_emp as s on s.emp_no = e.emp_no
+join departments as d on s.dept_no = d.dept_no
+where d.dept_name like 'Sales'
+or d.dept_name like 'Development'
+order by e.emp_no;
+
+select * from test7;
