@@ -93,3 +93,16 @@ and e.last_name like 'B%'
 order by e.emp_no;
 
 select * from test5;
+
+--Query 6--All employees from Sales Department
+drop view if exists test6;
+
+create view test6 as
+select e.emp_no, e.last_name, e.first_name, d.dept_name
+from employees as e
+join dept_emp as s on s.emp_no = e.emp_no
+join departments as d on s.dept_no = d.dept_no
+where d.dept_name like 'Sales'
+order by e.emp_no;
+
+select * from test6;
