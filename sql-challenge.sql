@@ -107,7 +107,7 @@ order by e.emp_no;
 
 select * from test6;
 
---Query 7
+--Query 7--All employees in Sales and Development
 drop view if exists test7;
 
 create view test7 as
@@ -120,3 +120,16 @@ or d.dept_name like 'Development'
 order by e.emp_no;
 
 select * from test7;
+
+--Query 8--Frequency of Employee Last Names
+drop view if exists test8;
+
+create view test8 as
+select e.last_name, count(e.last_name)
+from employees as e
+join dept_emp as s on s.emp_no = e.emp_no
+join departments as d on s.dept_no = d.dept_no
+group by e.last_name
+order by count (e.last_name) desc;
+
+select * from test8;
