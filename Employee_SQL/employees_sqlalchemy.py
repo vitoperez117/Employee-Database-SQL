@@ -36,8 +36,9 @@ salary_title_pd = pd.DataFrame(data = data1)
 x_axis = salary_title_pd['title']
 y_axis = salary_title_pd['average_salary']
 
+fig = plt.figure(figsize = (12,7))
 plt.xticks(rotation = 45)
 plt.title ("Average Salary by Employee Title")
 plt.bar(x_axis, y_axis)
 
-plt.savefig("Average Salary by Employee Title.png")
+plt.savefig("Average_Salary_by_Employee_Title.png", bbox_inches = 'tight')
