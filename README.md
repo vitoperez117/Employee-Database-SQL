@@ -2,11 +2,12 @@
 
 ## Table of Contents
 
-1) Diagram of schema (.png)
-1) Table schemata SQL 
-1) Queries SQL 
+1) ERD of schema (.png)
+1) Table schemata SQL (.sql)
+1) Queries SQL (.sql)
 1) Employee salary on SQL Alchemy (.py)
 1) Employee salary on SQL Alchemy (.ipynb)
+1) Average Salary by Title Data Frame (.png)
 1) Average Salary by Title Plot (.png)
 
 ## Analysis of Employee Salaries using SQL Alchemy
@@ -35,8 +36,8 @@ where (extract (year from (to_date))) = 2001;
 #### Titles
 Senior Engineer, Assistant Engineer, Engineer, Manager, Technique Leader, Senior Staff, Staff
 
-#### DataFrame of Average Salary by Employee Title
-![Average Salary by Title](Average_Salary_by_Title_DF.png)
+#### Data Frame of Average Salary by Employee Title
+![Average Salary by Title](Average_Salary_by_Title_DF.png = 10x10)
 
 #### Bar Chart of Average Salary by Employee Title
 ![Average Salary by Title](Average_Salary_by_Employee_Title.png)
