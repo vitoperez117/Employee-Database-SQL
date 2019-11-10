@@ -18,7 +18,12 @@ database_path = 'postgres://postgres:password@localhost:5432/SQL_Challenge'
 engine = create_engine(f'postgresql://{database_path}')
 conn = engine.connect()
 
-#read sql into pandas
+#read sql into pandas (practice)
 data = pd.read_sql("select * from salaries", conn)
 
-print (data.head())
+#print (data.head())
+
+#read sql into pandas (average salary based on title)
+data1 = pd.read_sql("select t.title, round(avg(s.salary)::numeric,2) as average_salary from salaries as s left outer join titles as t on s.emp_no = t.emp_no group by t.title;", conn)
+
+print (data1)

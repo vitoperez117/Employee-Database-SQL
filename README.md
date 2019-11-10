@@ -32,10 +32,4 @@ where (extract (year from (to_date))) = 2001;
 ### Average Salary Grouped by Title
 
 #### Titles
-"Engineer"
-"Senior Engineer"
-"Manager"
-"Assistant Engineer"
-"Staff"
-"Senior Staff"
-"Technique Leader"
+Senior Engineer, Assistant Engineer, Engineer, Manager, Technique Leader, Senior Staff, Staff
