@@ -36,6 +36,7 @@ where (extract (year from (to_date))) = 2001;
 Senior Engineer, Assistant Engineer, Engineer, Manager, Technique Leader, Senior Staff, Staff
 
 #### DataFrame of Average Salary by Employee Title
+
 title                       average_salary
 0  Assistant Engineer        48493.20
 1            Engineer        48539.78
@@ -45,6 +46,7 @@ title                       average_salary
 5               Staff        58465.27
 6    Technique Leader        48580.51
 
+![Average Salary by Title](Average_Salary_by_Employee_Title.png)
 #### Bar Chart of Average Salary by Employee Title
 
 ![Getting Started](Average Salary by Employee Title.png)
