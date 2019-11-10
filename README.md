@@ -21,7 +21,9 @@ Moreover, the 'salaries' table presents an issue. Although the 'titles' table in
 Try this query to see:
 
 select emp_no, to_date
+
 from salaries
+
 where (extract (year from (to_date))) = 2001;
 
 --------------------------
