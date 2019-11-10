@@ -7,6 +7,7 @@
 1) Queries SQL 
 1) Employee salary on SQL Alchemy (.py)
 1) Employee salary on SQL Alchemy (.ipynb)
+1) Average Salary by Title Plot (.png)
 
 ## Analysis of Employee Salaries using SQL Alchemy
 
@@ -33,3 +34,18 @@ where (extract (year from (to_date))) = 2001;
 
 #### Titles
 Senior Engineer, Assistant Engineer, Engineer, Manager, Technique Leader, Senior Staff, Staff
+
+#### DataFrame of Average Salary by Employee Title
+title                       average_salary
+0  Assistant Engineer        48493.20
+1            Engineer        48539.78
+2             Manager        51531.04
+3     Senior Engineer        48506.75
+4        Senior Staff        58503.29
+5               Staff        58465.27
+6    Technique Leader        48580.51
+
+#### Bar Chart of Average Salary by Employee Title
+
+![Getting Started](Average Salary by Employee Title.png)
+
