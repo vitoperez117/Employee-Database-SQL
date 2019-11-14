@@ -42,3 +42,7 @@ Senior Engineer, Assistant Engineer, Engineer, Manager, Technique Leader, Senior
 #### Bar Chart of Average Salary by Employee Title
 ![Average Salary by Title](Average_Salary_by_Employee_Title.png)
 
+
+--------------------------
+### Findings
+Comparing average salaries per title, the data immediately looks erroneous. An assistant engineer, an engineer, a senior engineer, and a technique leader should not be earning nearly the same salaries because of their places in the professional hierarchy. Similarly, a staff member should not be earning the same as a senior staff member. Based on the hierarchy of titles and the size of the company, the average salaries for superior or senior roles should be substantially greater than junior or subordinate roles.
