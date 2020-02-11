@@ -1,4 +1,4 @@
-# SQL-challenge
+# Employee-Database-SQL
 
 ## Table of Contents
 
