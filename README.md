@@ -23,16 +23,6 @@ Furthermore, when performing an inner join on the departments, dept_emp, employe
 
 There are 245,736 employee with mismatched 'hire_date' and 'start_date' entries. There are 323,161 employees with mismatched final dates of employment ('to_date') between the department employee and salaries tables.
 
---------------------------
-Try this query to see:
-
-select emp_no, to_date
-
-from salaries
-
-where (extract (year from (to_date))) = 2001;
-
---------------------------
 
 
 ### Average Salary Grouped by Title
@@ -45,6 +35,11 @@ Senior Engineer, Assistant Engineer, Engineer, Manager, Technique Leader, Senior
 
 #### Bar Chart of Average Salary by Employee Title
 ![Average Salary by Title](Average_Salary_by_Employee_Title.png)
+
+
+### Average Salary per Department
+In descending order:
+Sales, Marketing, Finance, Research, Production, Development, Customer Service, Quality Management, HR
 
 
 --------------------------
