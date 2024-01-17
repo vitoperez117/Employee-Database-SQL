@@ -19,6 +19,10 @@ Upon inspecting the CSVs, the 'titles' table has 443,308 rows whereas the 'salar
 
 Moreover, the 'salaries' table presents an issue. Although the 'titles' table includes current employees, the 'salaries' table does not include salary data for employees working past the year 2001; it contains no current salary data.
 
+Furthermore, when performing an inner join on the departments, dept_emp, employees, and salaries tables, the dates do NOT match up. Specificlaly, the 'from_date' in the department employee ('dept_emp') table is not the same as the 'from_date' in the salaries table.
+
+There are 245,736 employee with mismatched 'hire_date' and 'start_date' entries. There are 323,161 employees with mismatched final dates of employment ('to_date') between the department employee and salaries tables.
+
 --------------------------
 Try this query to see:
 
