@@ -1,3 +1,93 @@
+--NEW QUERIES (1/16/2024)
+--Separate Hire Date into Year, Month, Day in the Employees Table
+SELECT *,
+EXTRACT(YEAR FROM hire_date) AS hire_year,
+EXTRACT(MONTH FROM hire_date) AS hire_month,
+EXTRACT(DAY FROM hire_date) AS hire_day
+FROM employees;
+
+
+--Check for Errors in Salary Table
+SELECT *
+FROM salaries
+ORDER BY to_date DESC; 
+
+
+--Check if Dates Match Up from each Table 
+CREATE VIEW test_all AS
+SELECT d.dept_no, d.dept_name, CAST(de.emp_no AS int), 
+e.first_name, e.last_name, 
+e.hire_date, 
+de.from_date AS de_from_date, s.from_date AS s_from_date,
+de.to_date AS de_to_date, s.to_date AS s_to_date, 
+s.salary
+--JOIN tables: departments, dept_emp, employees, salaries
+FROM departments d
+JOIN dept_emp de
+ON d.dept_no = de.dept_no
+JOIN employees e
+ON de.emp_no = e.emp_no
+JOIN salaries s
+ON e.emp_no = s.emp_no
+ORDER BY length(de.emp_no), de.emp_no ASC; --order by length of int and int
+
+
+--JOIN Titles table with test_all VIEW above
+SELECT d.dept_no, d.dept_name, CAST(de.emp_no AS int), 
+e.first_name, e.last_name, t.title,
+e.hire_date, 
+de.from_date AS de_from_date, s.from_date AS s_from_date, t.from_date AS t_from_date,
+de.to_date AS de_to_date, s.to_date AS s_to_date, t.to_date AS t_to_date,
+s.salary
+FROM departments d
+JOIN dept_emp de
+ON d.dept_no = de.dept_no
+JOIN employees e
+ON de.emp_no = e.emp_no
+JOIN salaries s
+ON e.emp_no = s.emp_no
+JOIN titles t
+ON s.emp_no = t.emp_no
+ORDER BY length(de.emp_no), de.emp_no ASC;
+--TOTAL ROWS: 489,903
+
+
+--Check how many employees have mismatched hire and start dates
+SELECT emp_no, hire_date, de_from_date
+FROM test_all
+WHERE hire_date != de_from_date;
+--TOTAL: 245,736
+
+
+--Check how many employees have mismatched to_dates
+SELECT emp_no, de_to_date, s_to_date
+FROM test_all
+WHERE de_to_date != s_to_date;
+--TOTAL: 323,161
+
+
+--Check for Duplicate Entries
+SELECT emp_no, COUNT (emp_no)
+FROM test_all
+GROUP BY emp_no
+HAVING COUNT(emp_no) > 1
+ORDER BY emp_no;
+--TOTAL 31,579 duplicate employee numbers
+
+
+--Average salary per department
+CREATE VIEW avg_dept_salary AS
+SELECT e.dept_no, d.dept_name, COUNT (DISTINCT (e.emp_no)) AS employees, AVG (s.salary) AS average_dept_salary
+FROM departments d
+JOIN dept_emp e
+ON d.dept_no = e.dept_no
+JOIN salaries s
+ON e.emp_no = s.emp_no
+GROUP BY d.dept_name, e.dept_no
+ORDER BY average_dept_salary DESC;
+
+
+--OLD QUERIES (2019)
 --Query 1--Employee Details
 create view test1 as
 select e.emp_no, e.last_name, e.first_name, e.gender, s.salary
