@@ -29,10 +29,6 @@ There are 245,736 employee with mismatched 'hire_date' and 'start_date' entries.
 
 ### Average Salary Grouped by Title
 
-#### Titles
-Senior Engineer, Assistant Engineer, Engineer, Manager, Technique Leader, Senior Staff, Staff
-
-#### Average Salary by Employee Title
 ![Average Salary by Title](Average_Salary_by_Title_DF.png)
 
 ![Average Salary by Title](Average_Salary_by_Employee_Title.png)
