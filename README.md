@@ -35,9 +35,9 @@ There are 245,736 employee with mismatched 'hire_date' and 'start_date' entries.
 
 
 ### Average Salary per Department
-![Average Salary by Department](https://github.com/vitoperez117/Employee-Database-SQL/Employee_SQL/Average_Salary_by_Department_DF.png?raw=true)
+![Average Salary by Department](https://github.com/vitoperez117/Employee-Database-SQL/Average_Salary_by_Department_DF.png?raw=true)
 
-![Average Salary by Department](https://github.com/vitoperez117/Employee-Database-SQL/Employee_SQL/Average_Salary_by_Department.png?raw=true)
+![Average Salary by Department](https://github.com/vitoperez117/Employee-Database-SQL/Average_Salary_by_Department.png?raw=true)
 
 
 --------------------------
