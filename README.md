@@ -39,9 +39,9 @@ Senior Engineer, Assistant Engineer, Engineer, Manager, Technique Leader, Senior
 
 
 ### Average Salary per Department
-![Average Salary by Department] (https://github.com/vitoperez117/Employee-Database-SQL/Average_Salary_by_Department_DF.png?raw=true)
+![Average Salary by Department](https://github.com/vitoperez117/Employee-Database-SQL/Employee_SQL/Average_Salary_by_Department_DF.png?raw=true)
 
-![Average Salary by Department](https://github.com/vitoperez117/Employee-Database-SQL/Average_Salary_by_Department.png?raw=true)
+![Average Salary by Department](https://github.com/vitoperez117/Employee-Database-SQL/Employee_SQL/Average_Salary_by_Department.png?raw=true)
 
 
 --------------------------
