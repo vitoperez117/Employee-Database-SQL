@@ -9,6 +9,8 @@
 1) Employee salary on SQL Alchemy (.ipynb)
 1) Average Salary by Title Data Frame (.png)
 1) Average Salary by Title Plot (.png)
+2) Average Salary by Department Data Frame (.png)
+3) Average Salary by Department Plot (.png)
 
 ## Analysis of Employee Salaries using SQL Alchemy
 
@@ -30,16 +32,16 @@ There are 245,736 employee with mismatched 'hire_date' and 'start_date' entries.
 #### Titles
 Senior Engineer, Assistant Engineer, Engineer, Manager, Technique Leader, Senior Staff, Staff
 
-#### Data Frame of Average Salary by Employee Title
-![Average Salary by Title](Average_Salary_by_Title_DF.png)
+#### Average Salary by Employee Title
+![Average Salary by Title](Average_Salary_by_Department_DF.png)
 
-#### Bar Chart of Average Salary by Employee Title
 ![Average Salary by Title](Average_Salary_by_Employee_Title.png)
 
 
 ### Average Salary per Department
-In descending order:
-Sales, Marketing, Finance, Research, Production, Development, Customer Service, Quality Management, HR
+![Average Salary by Department] (https://github.com/vitoperez117/Employee-Database-SQL/Average_Salary_by_Department_DF.png?raw=true)
+
+![Average Salary by Department](https://github.com/vitoperez117/Employee-Database-SQL/Average_Salary_by_Department.png?raw=true)
 
 
 --------------------------
