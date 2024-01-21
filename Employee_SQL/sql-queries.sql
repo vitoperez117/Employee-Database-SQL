@@ -16,24 +16,6 @@ ORDER BY to_date DESC;
 --Check if Dates Match Up from each Table 
 CREATE VIEW test_all AS
 SELECT d.dept_no, d.dept_name, CAST(de.emp_no AS int), 
-e.first_name, e.last_name, 
-e.hire_date, 
-de.from_date AS de_from_date, s.from_date AS s_from_date,
-de.to_date AS de_to_date, s.to_date AS s_to_date, 
-s.salary
---JOIN tables: departments, dept_emp, employees, salaries
-FROM departments d
-JOIN dept_emp de
-ON d.dept_no = de.dept_no
-JOIN employees e
-ON de.emp_no = e.emp_no
-JOIN salaries s
-ON e.emp_no = s.emp_no
-ORDER BY length(de.emp_no), de.emp_no ASC; --order by length of int and int
-
-
---JOIN Titles table with test_all VIEW above
-SELECT d.dept_no, d.dept_name, CAST(de.emp_no AS int), 
 e.first_name, e.last_name, t.title,
 e.hire_date, 
 de.from_date AS de_from_date, s.from_date AS s_from_date, t.from_date AS t_from_date,
