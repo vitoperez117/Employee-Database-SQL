@@ -37,7 +37,7 @@ Comparing average salaries per title, the data immediately looks erroneous. An a
 
 
 ### Average Salary per Department
-![Average Salary by Department](Average_Salary_by_Department_DF.png =100x100)
+![Average Salary by Department](Average_Salary_by_Department_DF.png | width=1-0)
 
 ![Average Salary by Department](Average_Salary_by_Department.png)
 
