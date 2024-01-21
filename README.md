@@ -23,7 +23,11 @@ The task requires salaries to be aggregated by title. First, it is necessary to 
 
 3) When performing an inner join on the departments, dept_emp, employees, and salaries tables, the dates do NOT match up. Specifically, the 'from_date' in the department employee ('dept_emp') table is not the same as the 'from_date' in the salaries table.
 
-There are 245,736 employee with mismatched 'hire_date' and 'start_date' entries. There are 323,161 employees with mismatched final dates of employment ('to_date') between the 'department employee' and 'salaries' tables.
+4) Between the 'dept_emp' and 'titles' tables, the 'from_dates' match.
+
+5) The 'salaries' table contains 245,736 rows whose 'hire_dates' do not match with the 'from_dates' in the 'dept_emp' and 'titles' tables.
+
+6) There are 323,161 employees with mismatched final dates of employment ('to_date') between the 'department employee' and 'salaries' tables.
 
 
 
