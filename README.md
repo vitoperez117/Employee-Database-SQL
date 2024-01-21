@@ -41,6 +41,6 @@ Comparing average salaries per title, the data immediately looks erroneous. An a
 
 ![Average Salary by Department](Average_Salary_by_Department.png)
 
-Sales, Marketing, Finance, Research, Production, Development, Customer Service, Quality Management, HR
+Although the 'salaries' table is not updated, the budget allocation for department salaries appears sound. 
 
 
