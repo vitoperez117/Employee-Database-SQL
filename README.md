@@ -6,10 +6,10 @@ The objective is to identify discrepancies spanning multiple related databases b
 
 ## Method
 1) Do a cursory inspection of the CSV files before the JOIN and GROUP BY commands are issued.
-2) With SQL, perform an INNER JOIN between 'salaries' and 'titles' using employee ID as the shared index.
+2) With **SQL**, perform an INNER JOIN between 'salaries' and 'titles' using employee ID as the shared index.
 3) Do the same with the rest of the tables using the same shared index.
-4) Run SQL Queries on Python using SQLAlchemy and transform the query results into data frames in Pandas.
-5) Visualize the query results by using the data frames to generate charts using Matplotlib.
+4) Run SQL Queries on **Python** using **SQLAlchemy** and transform the query results into data frames in **Pandas**.
+5) Visualize the query results by using the data frames to generate charts using **Matplotlib**.
 
 ### Assessments
 1) The 'titles' table has 443,308 rows whereas the 'salaries' table has 300,024. The 'titles' table includes repeat employee number entries with different titles which indicates promotions or changes of title.
