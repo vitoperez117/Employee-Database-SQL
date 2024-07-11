@@ -1,34 +1,28 @@
-# Employee-Database-SQL
+# Employee Database SQL
 
-## Table of Contents
+## Finding 'Dirty' Data across Employee Databases using SQL Alchemy
 
-1) ERD of schema (.png)
-1) Table schemata SQL (.sql)
-1) SQL Queries (.sql)
-1) Employee salary on SQL Alchemy (.py)
-1) Employee salary on SQL Alchemy (.ipynb)
-1) Average Salary by Title Data Frame (.png)
-1) Average Salary by Title Plot (.png)
-2) Average Salary by Department Data Frame (.png)
-3) Average Salary by Department Plot (.png)
+The objective is to identify discrepancies spanning multiple related databases by using joins, queries, and aggregation. 
 
-## Analysis of Employee Salaries using SQL Alchemy
+## Method
+1) Do a cursory inspection of the CSV files before the JOIN and GROUP BY commands are issued.
+2) With SQL, perform an INNER JOIN between 'salaries' and 'titles' using employee ID as the shared index.
+3) Do the same with the rest of the tables using the same shared index.
+4) Run SQL Queries on Python using SQLAlchemy and transform the query results into data frames in Pandas.
+5) Visualize the query results by using the data frames to generate charts using Matplotlib.
 
-The task requires salaries to be aggregated by title. First, it is necessary to inspect the CSV files for 'salaries' and the 'titles' before the join and group by commands are issued. 
-
-### Limitations
-1) The 'titles' table has 443,308 rows whereas the 'salaries' table has 300,024. The 'titles' table includes repeat employee number entries with different titles which denotes a promotion or change of title.
+### Assessments
+1) The 'titles' table has 443,308 rows whereas the 'salaries' table has 300,024. The 'titles' table includes repeat employee number entries with different titles which indicates promotions or changes of title.
 
 2) The 'salaries' table does not include salary data for employees working past the year 2001; it contains no current salary data.
 
-3) When performing an inner join on the departments, dept_emp, employees, and salaries tables, the dates do NOT match up. Specifically, the 'from_date' in the department employee ('dept_emp') table is not the same as the 'from_date' in the salaries table.
+3) When performing an INNER JOIN on the departments, dept_emp, employees, and salaries tables, the dates do NOT match up. Specifically, the 'from_date' in the department employee ('dept_emp') table is not the same as the 'from_date' in the salaries table.
 
-4) Between the 'dept_emp' and 'titles' tables, the 'from_dates' match.
+4) The 'from_dates' match between the 'dept_emp' and 'titles' tables.
 
 5) The 'salaries' table contains 245,736 rows whose 'hire_dates' do not match with the 'from_dates' in the 'dept_emp' and 'titles' tables.
 
 6) There are 323,161 employees with mismatched final dates of employment ('to_date') between the 'department employee' and 'salaries' tables.
-
 
 
 ### Average Salary Grouped by Title
